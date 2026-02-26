@@ -7,6 +7,12 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
     <!-- Nav Section -->
@@ -116,7 +122,7 @@
       </div>
     </section>
 
-    <!--  -->
+    <!-- Order btn Section -->
     <section class="bg-gray-200 py-10">
       <div class="max-w-2xl mx-auto px-4 text-center">
         <p class="text-gray-800 mb-6 text-base md:text-lg">
@@ -128,6 +134,7 @@
           <!-- Order Button -->
           <a
             href="#order-section"
+            id="orderBtn"
             class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-md shadow-md transition duration-300"
           >
             👍 অর্ডার করতে চাই
@@ -274,7 +281,7 @@
     </section>
 
     <!-- Order section -->
-    <section class="py-16 bg-gray-100">
+    <section id="order-section" class="py-16 bg-gray-100">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
         <div class="text-center mb-12">
@@ -320,7 +327,6 @@
 
             <div class="border-b pb-4 mb-4">
               <div class="flex justify-between items-center mb-4">
-                <!-- Left Side (Image + Name + Quantity) -->
                 <div class="flex items-center gap-4">
                   <img
                     class="w-12 h-16 rounded-md"
@@ -333,14 +339,16 @@
 
                     <div class="flex items-center gap-2 mt-1">
                       <button
+                        id="minusBtn"
                         class="font-bold border border-gray-300 rounded px-2 py-1 hover:bg-gray-200"
                       >
                         -
                       </button>
 
-                      <span class="px-2">1</span>
+                      <span id="quantity" class="px-2">1</span>
 
                       <button
+                        id="plusBtn"
                         class="font-bold border border-gray-300 rounded px-2 py-1 hover:bg-gray-200"
                       >
                         +
@@ -350,7 +358,9 @@
                 </div>
 
                 <!-- Price -->
-                <span class="font-semibold text-gray-800"> 1000.00৳ </span>
+                <span id="price" class="font-semibold text-gray-800">
+                  1000.00৳
+                </span>
               </div>
             </div>
 
@@ -405,5 +415,14 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div
+        class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-white bg-gray-800 text-sm"
+      >
+        © 2026 Mashin Bazar. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
