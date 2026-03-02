@@ -3,7 +3,7 @@ const minusBtn = document.getElementById("minusBtn");
 const quantity = document.getElementById("quantity");
 const price = document.getElementById("price");
 
-const basePrice = 1000; // একটার দাম
+const basePrice = 1000;
 
 plusBtn.addEventListener("click", function () {
   let current = parseInt(quantity.innerText);
